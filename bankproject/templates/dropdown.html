@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DropDown</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+  <div class="container">
+  <div class="card body">
+    <br/>
+    <br/>
+    <br/>
+
+    <div class="row">
+    <div class="col-md-4">
+
+        <select name="dist" id="district" class="form-control">
+            <option value="0">--Select district--</option>
+            {% for item in district  %}
+            <option value="{{ item.id }}">{{ item.districtname }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <br/>
+    <div class="col-md-4">
+        <select name="bran" id="branch" class="form-control">
+            <option value="0">--Select branch--</option>
+            {% for item in branch  %}
+            <option value="{{ item.distid_id }}">{{ item.braname }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+   </div>
+  </div>
+</div>
+ <script>
+
+$(document).ready(function(){
+
+ var district = $("#district");
+ var branch = $("#branch");
+ var $options = branch.find('option');
+ district.on('change',function(){
+    branch.html($options.filter('[value="'+ this.value  +'"]'));
+ }).trigger('change');
+
+
+});
+</script>
+</body>
+</html>

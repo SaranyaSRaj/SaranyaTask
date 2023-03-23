@@ -1,0 +1,30 @@
+.nav-item{
+letter-spacing: .2em;
+font-size: 14px;
+text-transform: uppercase;
+}
+
+.dropdown-item{
+letter-spacing: .2em;
+font-size: 14px;
+text-transform: uppercase;
+}
+
+/***Navbar***/
+.nav-item{
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+}
+
+.my_footer{
+background-color:aqua;
+height: 60px;
+}
+
+.my_footer p{
+padding-top: 20px;
+font-size: 14px;
+}
+
